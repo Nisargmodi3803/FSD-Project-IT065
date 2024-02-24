@@ -20,10 +20,6 @@ public class Train
     @Column(name = "train_number",nullable = false)
     private String trainNumber;
 
-    @Column(name = "train_date")
-    @Temporal(TemporalType.DATE)
-    private Date trainDate;
-
     @Column(name = "from")
     private String trainFrom;
 
@@ -58,14 +54,6 @@ public class Train
 
     public void setTrainNumber(String trainNumber) {
         this.trainNumber = trainNumber;
-    }
-
-    public Date getTrainDate() {
-        return trainDate;
-    }
-
-    public void setTrainDate(Date trainDate) {
-        this.trainDate = trainDate;
     }
 
     public String getTrainFrom() {
@@ -107,7 +95,6 @@ public class Train
                 "trainId=" + trainId +
                 ", trainName='" + trainName + '\'' +
                 ", trainNumber='" + trainNumber + '\'' +
-                ", trainDate=" + trainDate +
                 ", trainFrom='" + trainFrom + '\'' +
                 ", trainTo='" + trainTo + '\'' +
                 ", trainPrice='" + trainPrice + '\'' +

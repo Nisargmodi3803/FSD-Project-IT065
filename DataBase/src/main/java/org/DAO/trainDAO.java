@@ -10,8 +10,6 @@ public interface trainDAO
 {
     void saveTrain(Train train);
 
-    Train getTrainByDate(Date date);
-
     Train getTrainByFromLocation(String trainFrom);
 
     Train getTrainByToLocation(String trainTo);
@@ -25,8 +23,6 @@ public interface trainDAO
     void updateTrainFrom(Train train,String updatedTrainFrom);
 
     void updateTrainTo(Train train,String updatedTrainTo);
-
-    void updateTrainDate(Train train,Date updatedTrainDate);
 
     void updateTrainSeat(Train train,int updatedTrainSeat);
 

@@ -25,9 +25,6 @@ public class User
     @Column(name = "phone-no")
     private String userPhoneNo;
 
-    @Column(name = "date_of_birth")
-    @Temporal(TemporalType.DATE)
-    private Date userDOB;
 
     public long getUserId() {
         return userId;
@@ -69,14 +66,6 @@ public class User
         this.userPhoneNo = userPhoneNo;
     }
 
-    public Date getUserDOB() {
-        return userDOB;
-    }
-
-    public void setUserDOB(Date userDOB) {
-        this.userDOB = userDOB;
-    }
-
     @Override
     public String toString() {
         return "User{" +
@@ -85,7 +74,6 @@ public class User
                 ", userEmail='" + userEmail + '\'' +
                 ", userPassword='" + userPassword + '\'' +
                 ", userPhoneNo=" + userPhoneNo +
-                ", userDOB=" + userDOB +
                 '}';
     }
 }

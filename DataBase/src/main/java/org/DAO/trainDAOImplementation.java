@@ -30,14 +30,6 @@ public class trainDAOImplementation implements trainDAO
     }
 
     @Override
-    public Train getTrainByDate(Date date) {
-        try(Session session = sessionFactory.openSession())
-        {
-            return session.get(Train.class,date);
-        }
-    }
-
-    @Override
     public Train getTrainByFromLocation(String trainFrom) {
         try(Session session = sessionFactory.openSession())
         {
@@ -57,7 +49,7 @@ public class trainDAOImplementation implements trainDAO
     public List<Train> getAllTrain() {
         try(Session session = sessionFactory.openSession())
         {
-            Query<Train> query = session.createQuery("from Train",Train.class);
+            Query<Train> query = session.createQuery("from Train ",Train.class);
             return query.list();
         }
     }
@@ -102,17 +94,6 @@ public class trainDAOImplementation implements trainDAO
             Transaction transaction = session.beginTransaction();
             Train existingTrain = session.get(Train.class,train.getTrainId());
             existingTrain.setTrainTo(updatedTrainTo);
-            transaction.commit();
-        }
-    }
-
-    @Override
-    public void updateTrainDate(Train train, Date updatedTrainDate) {
-        try(Session session = sessionFactory.openSession())
-        {
-            Transaction transaction = session.beginTransaction();
-            Train existingTrain = session.get(Train.class,train.getTrainId());
-            existingTrain.setTrainDate(updatedTrainDate);
             transaction.commit();
         }
     }

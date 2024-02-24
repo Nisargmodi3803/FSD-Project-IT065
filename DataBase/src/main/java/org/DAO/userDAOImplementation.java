@@ -89,17 +89,6 @@ public class userDAOImplementation implements userDAO
     }
 
     @Override
-    public void updateUserDOB(User user, Date updatedUserDOB) {
-        try(Session session = sessionFactory.openSession())
-        {
-            Transaction transaction = session.beginTransaction();
-            User existingUser = session.get(User.class,user.getUserId());
-            existingUser.setUserDOB(updatedUserDOB);
-            transaction.commit();
-        }
-    }
-
-    @Override
     public void deleteUser(String email) {
         try(Session session = sessionFactory.openSession())
         {

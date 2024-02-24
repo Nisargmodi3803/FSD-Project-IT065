@@ -21,7 +21,5 @@ public interface userDAO
 
     void updateUserPhoneNo(User user,String updatedUserPhoneNo);
 
-    void updateUserDOB(User user, Date updatedUserDOB);
-
     void deleteUser(String email);
 }
