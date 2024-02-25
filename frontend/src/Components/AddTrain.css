@@ -1,0 +1,63 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set height to full viewport height */
+  }
+  
+  form {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .input-pair {
+    display: flex;
+    flex-wrap: wrap; /* Allow pairs to wrap to the next line */
+    margin-bottom: 20px; /* Add margin between pairs */
+  }
+  
+  .input-box {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Add margin between input boxes */
+  }
+  
+  .input-box input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .input-box input::placeholder {
+    color: #888;
+  }
+  
+  .input-box input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .button {
+    display: flex;
+    justify-content: center; /* Center button horizontally */
+    margin-top: 20px; /* Add margin on top of the button */
+  }
+  
+  .button button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button button:hover {
+    background-color: #0056b3;
+  }
+  
