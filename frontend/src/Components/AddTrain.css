@@ -1,6 +1,6 @@
-/* .background{
-  background: url('../assets/fast-train_1417-1816.avif');
-} */
+.full-page{
+  background: url('../assets/Vande-Bharat-15.webp') center/cover;
+}
 
 .wrapper {
   display: flex;
@@ -11,7 +11,7 @@
 }
 
 form {
-  background-color: #f0f0f0;
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 20px;
   border-radius: 10px;
 }

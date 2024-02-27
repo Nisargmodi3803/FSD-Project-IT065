@@ -8,7 +8,7 @@ import "./AddTrain.css"
 
 export default function AddTrain() {
   return (
-    <section>
+    <div className='full-page'>
       <div className='wrapper'>
         <form className='background'>
           <h1>ADD TRAIN</h1>
@@ -53,6 +53,6 @@ export default function AddTrain() {
           </div>
         </form>
       </div>
-    </section>
+    </div>
   )
 }

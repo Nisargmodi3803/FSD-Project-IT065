@@ -6,6 +6,7 @@ import Home from './Home'
 import TrainList from './TrainList'
 import BookTicket from './BookTicket'
 import TicketList from './TicketList'
+import Book from './Book'
 
 export default function NavRouters() {
   return (
@@ -18,6 +19,7 @@ export default function NavRouters() {
                 <Route path='/trainList' element={<TrainList/>}/>
                 <Route path='/bookTrain' element={<BookTicket/>}/>
                 <Route path='/ticketList' element={<TicketList/>}/>
+                <Route path='/bookTrain/book' element={<Book/>}/>
             </Routes>
         </BrowserRouter>
     </div>

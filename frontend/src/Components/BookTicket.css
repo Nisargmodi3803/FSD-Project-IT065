@@ -1,5 +1,5 @@
-.trainlist {
-    background: url('../assets/fast-train_1417-1816.avif') center/cover;
+.bookticket {
+    background: url('../assets/Vande_Bharat_Express_around_Mumbai.jpg') center/cover;
     height: 100vh;
     display: flex;
     flex-direction: column;
