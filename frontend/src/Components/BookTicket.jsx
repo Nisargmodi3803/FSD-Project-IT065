@@ -9,7 +9,7 @@ export default function BookTicket() {
     <div className='bookticket'>
       <div className='wrap'>
         <form className='search-form'>
-          <h1>TRAIN LIST</h1>
+          <h1>BOOK TRAIN</h1>
           <br />
           <div className='input-pair'>
             <div className='input-box'>
@@ -49,7 +49,7 @@ export default function BookTicket() {
                 <td>Ahmedabad</td>
                 <td>300</td>
                 <td>50</td>
-                <td><button onClick={() => navigate('/book')}>Book</button>
+                <td><button className='book-button' onClick={() => navigate('/bookTrain/book')}>Book</button>
                 </td>
               </tr>
             </thead>

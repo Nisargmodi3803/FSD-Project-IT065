@@ -35,6 +35,20 @@
     margin-left: 10px;
 }
 
+.book-button {
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #007bff;
+    color: #f2f2f2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height: 1; /* Vertically center the button text */
+}
+
+.book-button:hover {
+    background-color: #0056b3;
+}
+
 /* Table Styles */
 .table-container {
     width: 80%;
