@@ -3,6 +3,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './home.css'; // Your custom CSS file for styling
+import image1 from '../assets/pexels-pixabay-210144.jpg'; // Import your local image
+import image2 from '../assets/pexels-pixabay-258510.jpg'; // Import your local image
 
 const Home = () => {
   const settings = {
@@ -20,27 +22,17 @@ const Home = () => {
     <div className="home">
       <header>
         <h1>Welcome to the Train Ticket Booking System</h1>
-        <nav>
-          <ul>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
       </header>
 
       <section id="slider">
         <Slider {...settings}>
           <div>
-            <img src="https://www.pexels.com/photo/train-at-railway-station-15578683/" alt="Image 1" />
+            <img src={image1} alt="Image 1" />
           </div>
           <div>
-            <img src="https://www.pexels.com/photo/train-on-railway-in-winter-15541442/" alt="Image 2" />
+            <img src={image2} alt="Image 2" />
           </div>
-          {/* <div>
-            <img src="image3.jpg" alt="Image 3" />
-          // </div> */}
+          {/* Add more slides with local images */}
         </Slider>
       </section>
 

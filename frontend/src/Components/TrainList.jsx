@@ -39,7 +39,7 @@ export default function TrainList() {
                 <th>To</th>
                 <th>Price</th>
                 <th>Available Seats</th>
-                <th>Delete</th>
+                <th>Delete Train</th>
               </tr>
               <tr>
                 <td>Gujarat Queen</td>
@@ -48,7 +48,7 @@ export default function TrainList() {
                 <td>Ahmedabad</td>
                 <td>300</td>
                 <td>50</td>
-                <td><button>Delete</button></td>
+                <td><button className='delete-button'>Delete</button></td>
               </tr>
             </thead>
             <tbody>

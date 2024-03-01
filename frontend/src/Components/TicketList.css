@@ -1,5 +1,5 @@
-.trainlist {
-    background: url('../assets/pexels-pixabay-258510.jpg') center/cover;
+.ticket {
+    background: url('../assets/pexels-torsten-dettlaff-69866.jpg') center/cover;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -31,28 +31,15 @@
 }
 
 /* Button Styles */
-.input-box {
-    margin-right: 10px;
-}
-
-/* Button Styles */
 .button {
     margin-left: 10px;
 }
 
-.delete-button {
-    padding: 10px 20px; /* Adjust padding as needed */
-    background-color: #007bff;
-    color: #f2f2f2;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    line-height: 1; /* Vertically center the button text */
+/* Add space between buttons */
+.button button {
+    margin-right: 10px;
 }
 
-.delete-button:hover {
-    background-color: #0056b3;
-}
 /* Table Styles */
 .table-container {
     width: 80%;
@@ -73,11 +60,7 @@
 }
 
 /* Delete Button Styles */
-/* .delete-button {
-    margin-left: 10px;
-}
-
-.delete-button button {
+.ticket .table-container .delete-button button {
     padding: 10px 20px;
     background-color: #007bff;
     color: #f2f2f2;
@@ -88,6 +71,6 @@
     height: 45px;
 }
 
-.delete-button button:hover {
+.ticket .table-container .delete-button button:hover {
     background-color: #0056b3;
-} */
+}
