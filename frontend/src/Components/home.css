@@ -1,56 +1,58 @@
-/* Home.css */
-
 .home {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-  }
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+header h1 {
+  margin: 0;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+section {
+  margin-top: 20px;
+}
+
+#slider {
+  margin-bottom: 20px;
+}
+
+#slider img {
+  width: 100%;
+}
+
+h2 {
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+
+.slick-slide img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: cover;
   
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-  }
-  
-  header h1 {
-    margin: 0;
-    padding: 10px;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 10px;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  section {
-    margin-top: 20px;
-  }
-  
-  #slider {
-    margin-bottom: 20px;
-  }
-  
-  #slider img {
-    width: 100%;
-  }
-  
-  h2 {
-    color: #333;
-  }
-  
-  p {
-    color: #666;
-  }
-  
-  /* Add more custom styling as needed */
-  
+}

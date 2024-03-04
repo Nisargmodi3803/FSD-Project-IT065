@@ -2,9 +2,10 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import './home.css'; // Your custom CSS file for styling
-import image1 from '../assets/pexels-pixabay-210144.jpg'; // Import your local image
-import image2 from '../assets/pexels-pixabay-258510.jpg'; // Import your local image
+import './home.css';
+import image1 from '../assets/pexels-julia-volk-5205541.jpg'
+import image2 from '../assets/pexels-julia-volk-5205083.jpg';
+import image3 from '../assets/pexels-shivam-tak-4481330.jpg'
 
 const Home = () => {
   const settings = {
@@ -32,7 +33,9 @@ const Home = () => {
           <div>
             <img src={image2} alt="Image 2" />
           </div>
-          {/* Add more slides with local images */}
+          <div>
+            <img src={image3} alt="Image 3" />
+          </div>
         </Slider>
       </section>
 
@@ -41,8 +44,6 @@ const Home = () => {
         <p>Explore the key features of our Train Ticket Booking System.</p>
         {/* Add more content and features here */}
       </section>
-
-      {/* Other sections like how it works, pricing, contact, etc. */}
     </div>
   );
 }
