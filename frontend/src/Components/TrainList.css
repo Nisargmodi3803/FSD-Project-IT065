@@ -37,13 +37,13 @@
 }
 
 .delete-button {
-    padding: 10px 20px; 
+    padding: 10px 20px;
     background-color: #007bff;
     color: #f2f2f2;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    line-height: 1; 
+    line-height: 1;
 }
 
 .delete-button:hover {
@@ -69,7 +69,7 @@
 }
 
 .update-button {
-    padding: 10px 20px; 
+    padding: 10px 20px;
     background-color: #007bff;
     color: #f2f2f2;
     border: none;
@@ -80,4 +80,13 @@
 
 .update-button:hover {
     background-color: #0056b3;
+}
+
+.dialog-text-field-container {
+    margin-bottom: 20px;
+}
+
+.dialog-text-label {
+    font-weight: bold;
+    margin-bottom: 5px;
 }
