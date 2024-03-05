@@ -94,23 +94,23 @@ export default function TrainList() {
           </div>
           <div className='dialog-text-field-container'>
             <div className='dialog-text-label'>Train Number</div>
-            <TextField fullWidth value={trainDetails.number} className='dialog-text-field' onChange={(e) => setTrainDetails({ ...trainDetails, number: e.target.value })}/>
+            <TextField fullWidth value={trainDetails.number} className='dialog-text-field' onChange={(e) => setTrainDetails({ ...trainDetails, number: e.target.value })} />
           </div>
           <div className='dialog-text-field-container'>
             <div className='dialog-text-label'>Train From</div>
-            <TextField fullWidth value={trainDetails.from} className='dialog-text-field' onChange={(e) => setTrainDetails({ ...trainDetails, from: e.target.value })}/>
+            <TextField fullWidth value={trainDetails.from} className='dialog-text-field' onChange={(e) => setTrainDetails({ ...trainDetails, from: e.target.value })} />
           </div>
           <div className='dialog-text-field-container'>
             <div className='dialog-text-label'>Train To</div>
-            <TextField fullWidth value={trainDetails.to} className='dialog-text-field' onChange={(e) => setTrainDetails({ ...trainDetails, to: e.target.value })}/>
+            <TextField fullWidth value={trainDetails.to} className='dialog-text-field' onChange={(e) => setTrainDetails({ ...trainDetails, to: e.target.value })} />
           </div>
           <div className='dialog-text-field-container'>
             <div className='dialog-text-label'>Train Price</div>
-            <TextField fullWidth value={trainDetails.price} className='dialog-text-field' onChange={(e) => setTrainDetails({ ...trainDetails, price: e.target.value })}/>
+            <TextField fullWidth value={trainDetails.price} className='dialog-text-field' onChange={(e) => setTrainDetails({ ...trainDetails, price: e.target.value })} />
           </div>
           <div className='dialog-text-field-container'>
             <div className='dialog-text-label'>Train Available Seat</div>
-            <TextField fullWidth value={trainDetails.availableSeats} className='dialog-text-field' onChange={(e) => setTrainDetails({ ...trainDetails, availableSeats: e.target.value })}/>
+            <TextField fullWidth value={trainDetails.availableSeats} className='dialog-text-field' onChange={(e) => setTrainDetails({ ...trainDetails, availableSeats: e.target.value })} />
           </div>
         </DialogContent>
         <DialogActions className='dialog-actions'>
