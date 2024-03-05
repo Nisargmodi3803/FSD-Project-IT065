@@ -1,8 +1,10 @@
 import React from 'react';
 import { FaLocationDot } from "react-icons/fa6";
 import './TrainList.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function TrainList() {
+  const navigate = useNavigate()
   return (
     <div className='trainlist'>
       <div className='wrap'>
@@ -40,6 +42,7 @@ export default function TrainList() {
                 <th>Price</th>
                 <th>Available Seats</th>
                 <th>Delete Train</th>
+                <th>Update Train</th>
               </tr>
               <tr>
                 <td>Gujarat Queen</td>
@@ -49,6 +52,7 @@ export default function TrainList() {
                 <td>300</td>
                 <td>50</td>
                 <td><button className='delete-button'>Delete</button></td>
+                <td><button className='update-button' onClick={() => navigate('/trainList/updateTrain')}>update</button></td>
               </tr>
             </thead>
             <tbody>
