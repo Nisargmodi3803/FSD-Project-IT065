@@ -1,5 +1,7 @@
 import React from 'react'
 import { FaLocationDot } from "react-icons/fa6";
+import { BsFillCalendar2DateFill } from "react-icons/bs";
+import { IoIosTime } from "react-icons/io";
 import './TicketList.css'
 
 export default function TicketList() {
@@ -17,6 +19,14 @@ export default function TicketList() {
             <div className='input-box'>
               <FaLocationDot className='icon' />
               <input type='text' placeholder='To Location' />
+            </div>
+            <div className='input-box'>
+              <BsFillCalendar2DateFill className='icon' />
+              <input type='date' placeholder='Date' />
+            </div>
+            <div className='input-box'>
+              <IoIosTime className='icon' />
+              <input type='time' placeholder='Time' />
             </div>
             <div className='button'>
               <button type='submit'>Search</button>

@@ -16,6 +16,7 @@ export default function Nav() {
                     <li><Link to={"/trainList"}>Train List</Link></li>
                     <li><Link to={"/bookTrain"}>Book Train</Link></li>
                     <li><Link to={"/ticketList"}>Ticket List</Link></li>
+                    <li><Link to={"/chart"}>Train Chart</Link></li>
                 </ul>
             </nav>
         </div>

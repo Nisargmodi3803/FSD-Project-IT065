@@ -4,6 +4,8 @@ import { AiOutlineFieldNumber } from "react-icons/ai";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaRupeeSign } from "react-icons/fa";
 import { MdOutlineAirlineSeatReclineExtra } from "react-icons/md";
+import { BsFillCalendar2DateFill } from "react-icons/bs";
+import { IoIosTime } from "react-icons/io";
 import "./AddTrain.css";
 
 export default function AddTrain() {
@@ -33,7 +35,9 @@ export default function AddTrain() {
       fromLocation: '',
       toLocation: '',
       ticketPrice: '',
-      numberOfSeats: ''
+      numberOfSeats: '',
+      date:'',
+      time:''
     });
   };
 
@@ -109,6 +113,30 @@ export default function AddTrain() {
                 placeholder='Number of Seats'
                 name='numberOfSeats'
                 value={trainDetails.numberOfSeats}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+          <br/>
+          <br/>
+          <div className='input-pair'>
+            <div className='input-box'>
+              <BsFillCalendar2DateFill className='icon' />
+              <input
+                type='date'
+                placeholder='Date'
+                name='Date'
+                value={trainDetails.date}
+                onChange={handleChange}
+              />
+            </div>
+            <div className='input-box'>
+              <IoIosTime className='icon' />
+              <input
+                type='time'
+                placeholder='time'
+                name='time'
+                value={trainDetails.time}
                 onChange={handleChange}
               />
             </div>

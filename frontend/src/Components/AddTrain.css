@@ -23,16 +23,19 @@ h1 {
 .input-pair {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between; /* Add this to evenly space the input boxes */
   margin-bottom: 20px;
 }
 
 .input-box {
   display: flex;
   align-items: center;
-  margin-right: 20px;
+  flex: 1; /* Add this to make the input boxes occupy equal width */
+  margin-bottom: 10px; /* Adjust margin for better spacing */
 }
 
 .input-box input {
+  width: 100%; /* Make the input boxes occupy the entire width of the parent */
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;

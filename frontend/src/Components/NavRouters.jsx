@@ -7,6 +7,7 @@ import TrainList from './TrainList';
 import BookTicket from './BookTicket';
 import TicketList from './TicketList';
 import Book from './Book';
+import TrainChart from './TrainChart';
 
 export default function NavRouters() {
   return (
@@ -20,6 +21,7 @@ export default function NavRouters() {
           <Route path='/bookTrain' element={<BookTicket/>}/>
           <Route path='/ticketList' element={<TicketList/>}/>
           <Route path='/bookTrain/book' element={<Book/>}/>
+          <Route path='/chart' element={<TrainChart/>}/>
         </Routes>
       </BrowserRouter>
     </div>
