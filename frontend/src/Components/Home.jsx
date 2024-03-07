@@ -25,7 +25,7 @@ const Home = () => {
         <h1>Welcome to the Train Ticket Booking System</h1>
       </header>
 
-      <section id="slider">
+      {/* <section id="slider">
         <Slider {...settings}>
           <div>
             <img src={image1} alt="Image 1" />
@@ -37,7 +37,7 @@ const Home = () => {
             <img src={image3} alt="Image 3" />
           </div>
         </Slider>
-      </section>
+      </section> */}
 
       <section id="features">
         <h2>Features</h2>

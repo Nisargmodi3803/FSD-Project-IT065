@@ -15,7 +15,9 @@ export default function AddTrain() {
     fromLocation: '',
     toLocation: '',
     ticketPrice: '',
-    numberOfSeats: ''
+    numberOfSeats: '',
+    date: '',
+    time: ''
   });
 
   const handleChange = (e) => {
@@ -36,8 +38,8 @@ export default function AddTrain() {
       toLocation: '',
       ticketPrice: '',
       numberOfSeats: '',
-      date:'',
-      time:''
+      date: '',
+      time: ''
     });
   };
 
@@ -117,8 +119,8 @@ export default function AddTrain() {
               />
             </div>
           </div>
-          <br/>
-          <br/>
+          <br />
+          <br />
           <div className='input-pair'>
             <div className='input-box'>
               <BsFillCalendar2DateFill className='icon' />

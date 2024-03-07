@@ -37,7 +37,6 @@ export default function TicketList() {
           </div>
         </form>
       </div>
-
       <div className='table-container'>
         <div className='table'>
           <table>
