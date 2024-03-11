@@ -1,5 +1,9 @@
 package com.example.backend;
 
+import com.example.backend.Repository.TicketRepository;
+import com.example.backend.entities.Ticket;
+import com.example.backend.entities.Train;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

@@ -1,42 +1,40 @@
 package com.example.backend.entities;
-import jakarta.persistence.*;
 
-import java.sql.Time;
-import java.util.Date;
+import jakarta.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-@Table(name = "TRAIN")
-public class Train
-{
+@Table(name = "train")
+public class Train {
     @Id
-    @GeneratedValue
-    @Column(name = "train_id")
-    private long trainId;
+    @Column(name = "train_number") // Specify the column name explicitly
+    private long trainNumber;
 
-    @Column(name = "train_name",nullable = false)
+    @Column(name = "train_name", nullable = false)
     private String trainName;
 
-    @Column(name = "train_number",nullable = false)
-    private String trainNumber;
-
-    @Column(name = "from")
+    @Column(name = "train_from", nullable = false)
     private String trainFrom;
 
-    @Column(name = "to")
+    @Column(name = "train_to", nullable = false)
     private String trainTo;
 
-    @Column(name = "price")
-    private double trainPrice;
-
-    @Column(name = "seat")
+    @Column(name = "train_seat", nullable = false)
     private int trainSeat;
 
-    public long getTrainId() {
-        return trainId;
+    @Column(name = "price", nullable = false)
+    private int price;
+
+//    @OneToMany(mappedBy = "train", cascade = CascadeType.ALL, targetEntity = Ticket.class)
+//    private List<Ticket> tickets = new ArrayList<>();
+
+    public long getTrainNumber() {
+        return trainNumber;
     }
 
-    public void setTrainId(long trainId) {
-        this.trainId = trainId;
+    public void setTrainNumber(long trainNumber) {
+        this.trainNumber = trainNumber;
     }
 
     public String getTrainName() {
@@ -45,14 +43,6 @@ public class Train
 
     public void setTrainName(String trainName) {
         this.trainName = trainName;
-    }
-
-    public String getTrainNumber() {
-        return trainNumber;
-    }
-
-    public void setTrainNumber(String trainNumber) {
-        this.trainNumber = trainNumber;
     }
 
     public String getTrainFrom() {
@@ -71,15 +61,7 @@ public class Train
         this.trainTo = trainTo;
     }
 
-    public double getTrainPrice() {
-        return trainPrice;
-    }
-
-    public void setTrainPrice(double trainPrice) {
-        this.trainPrice = trainPrice;
-    }
-
-    public long getTrainSeat() {
+    public int getTrainSeat() {
         return trainSeat;
     }
 
@@ -87,17 +69,19 @@ public class Train
         this.trainSeat = trainSeat;
     }
 
-
-    @Override
-    public String toString() {
-        return "Train{" +
-                "trainId=" + trainId +
-                ", trainName='" + trainName + '\'' +
-                ", trainNumber='" + trainNumber + '\'' +
-                ", trainFrom='" + trainFrom + '\'' +
-                ", trainTo='" + trainTo + '\'' +
-                ", trainPrice='" + trainPrice + '\'' +
-                ", trainSeat=" + trainSeat +
-                '}';
+    public int getPrice() {
+        return price;
     }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+//    public List<Ticket> getTickets() {
+//        return tickets;
+//    }
+//
+//    public void setTickets(List<Ticket> tickets) {
+//        this.tickets = tickets;
+//    }
 }
