@@ -47,7 +47,6 @@ public class Ticket {
 
     public void setTotalTickets(int totalTickets) {
         this.totalTickets = totalTickets;
-        calculateTotalFareAndUpdateSeats();
     }
 
     public int getTotalFare() {
@@ -66,7 +65,7 @@ public class Ticket {
         this.train = train;
     }
 
-    public void calculateTotalFareAndUpdateSeats() {
+    public void calculateTotalFareAndUpdateSeats(Train train) {
         if (train != null) {
             totalFare = totalTickets * train.getPrice();
             int seats = train.getTrainSeat();

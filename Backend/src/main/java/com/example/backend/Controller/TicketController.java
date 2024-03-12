@@ -30,6 +30,6 @@ public class TicketController
     public String deleteTicket(@PathVariable long ticketId)
     {
         ticketService.deleteTicket(ticketId);
-        return "Ticket with ticket-id : "+ticketId+ "deleted";
+        return "Ticket with ticket-id : "+ticketId+ " deleted";
     }
 }
