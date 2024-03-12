@@ -73,4 +73,9 @@ public class TrainService
     {
         trainRepository.deleteById(trainNumber);
     }
+
+    public List<Train> getTrainByLocation(String toLocation,String fromLocation)
+    {
+        return trainRepository.getTrainByLocation(toLocation,fromLocation);
+    }
 }

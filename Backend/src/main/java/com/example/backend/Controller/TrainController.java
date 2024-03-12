@@ -44,4 +44,10 @@ public class TrainController
         trainService.deleteByTrainNumber(trainNumber);
         return "Train with trainNumber : "+trainNumber+" delete successfully";
     }
+
+    @GetMapping("/trains/location")
+    public List<Train> getTrainByLocation(@RequestParam("toLocation") String toLocation, @RequestParam("fromLocation") String fromLocation)
+    {
+        return trainService.getTrainByLocation(toLocation,fromLocation);
+    }
 }
