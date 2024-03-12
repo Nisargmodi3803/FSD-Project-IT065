@@ -3,6 +3,8 @@ package com.example.backend.entities;
 import com.example.backend.Exception.TrainNotFoundException;
 import jakarta.persistence.*;
 
+// Ticket Entity
+
 @Entity
 @Table(name = "ticket")
 public class Ticket {

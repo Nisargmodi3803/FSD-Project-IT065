@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+// Train Entity
+
 @Entity
 @Table(name = "train")
 public class Train {

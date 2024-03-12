@@ -11,10 +11,10 @@ export default function AddTrain() {
   const [trainDetails, setTrainDetails] = useState({
     trainName: '',
     trainNumber: '',
-    trainFrom: '', // Change to match your entity class field
-    trainTo: '', // Change to match your entity class field
-    price: '', // Change to match your entity class field
-    trainSeat: '' // Change to match your entity class field
+    trainFrom: '',
+    trainTo: '', 
+    price: '', 
+    trainSeat: '' 
   });
 
   const handleChange = (e) => {
@@ -30,7 +30,7 @@ export default function AddTrain() {
     try {
       console.log(trainDetails);
       const response = await axios.post('http://localhost:8080/train/trains', trainDetails);
-      console.log(response.data); // Log the response from the backend
+      console.log(response.data); 
       alert('Train added successfully!');
       clearForm();
     } catch (error) {

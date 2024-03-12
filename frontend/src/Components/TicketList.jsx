@@ -21,7 +21,7 @@ export default function TicketList() {
   const handleDelete = async (ticketId) => {
     try {
       const response = await axios.delete(`http://localhost:8080/ticket/tickets/${ticketId}`);
-      console.log(response.data); // Log the response from the backend
+      console.log(response.data);
       alert('Ticket deleted successfully!');
       fetchAllTickets();
     } catch (error) {

@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
+// TrainRepository
+
 public interface TrainRepository extends JpaRepository<Train, Long> {
 
     @Query("SELECT train FROM Train train WHERE train.trainTo = :toLocation AND train.trainFrom = :fromLocation")

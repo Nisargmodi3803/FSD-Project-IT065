@@ -49,7 +49,7 @@ export default function TrainList() {
   const handleUpdateSubmit = async () => {
     try {
       const response = await axios.patch(`http://localhost:8080/train/trains/${selectedTrain.trainNumber}`, trainDetails);
-      console.log(response.data); // Log the response from the backend
+      console.log(response.data);
       alert('Train updated successfully!');
       setIsUpdateFormOpen(false);
       fetchAllTrains();
@@ -62,7 +62,7 @@ export default function TrainList() {
   const handleDelete = async (trainNumber) => {
     try {
       const response = await axios.delete(`http://localhost:8080/train/trains/${trainNumber}`);
-      console.log(response.data); // Log the response from the backend
+      console.log(response.data);
       alert('Train deleted successfully!');
       fetchAllTrains();
     } catch (error) {

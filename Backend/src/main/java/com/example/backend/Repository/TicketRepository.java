@@ -7,6 +7,8 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
+// TicketRepository
+
 public interface TicketRepository extends JpaRepository<Ticket,Long>
 {
     @Query("SELECT ticket FROM Ticket ticket WHERE ticket.train.trainNumber = :trainNumber")

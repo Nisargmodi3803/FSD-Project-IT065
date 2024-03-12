@@ -16,10 +16,9 @@
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.7); /* Transparent background color */
+    background-color: rgba(255, 255, 255, 0.7); 
 }
 
-/* Input Styles */
 .input-pair {
     display: flex;
     justify-content: center;
@@ -30,26 +29,24 @@
     margin-right: 10px;
 }
 
-/* Button Styles */
 .button {
     margin-left: 10px;
 }
 
 .book-button {
-    padding: 10px 20px; /* Adjust padding as needed */
+    padding: 10px 20px; 
     background-color: #007bff;
     color: #f2f2f2;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    line-height: 1; /* Vertically center the button text */
+    line-height: 1; 
 }
 
 .book-button:hover {
     background-color: #0056b3;
 }
 
-/* Table Styles */
 .table-container {
     width: 80%;
     margin: 0 auto;
