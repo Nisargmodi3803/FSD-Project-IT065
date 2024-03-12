@@ -8,34 +8,8 @@ export default function TicketList() {
   return (
     <div className='ticket'>
       <div className='wrap'>
-        <form className='search-form'>
           <h1>TICKET LIST</h1>
           <br />
-          <div className='input-pair'>
-            <div className='input-box'>
-              <FaLocationDot className='icon' />
-              <input type='text' placeholder='From Location' />
-            </div>
-            <div className='input-box'>
-              <FaLocationDot className='icon' />
-              <input type='text' placeholder='To Location' />
-            </div>
-            <div className='input-box'>
-              <BsFillCalendar2DateFill className='icon' />
-              <input type='date' placeholder='Date' />
-            </div>
-            <div className='input-box'>
-              <IoIosTime className='icon' />
-              <input type='time' placeholder='Time' />
-            </div>
-            <div className='button'>
-              <button type='submit'>Search</button>
-            </div>
-            <div className='button'>
-              <button type='submit'>Reset</button>
-            </div>
-          </div>
-        </form>
       </div>
       <div className='table-container'>
         <div className='table'>

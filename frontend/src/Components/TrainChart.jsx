@@ -24,10 +24,6 @@ export default function TrainChart() {
                         <AiOutlineFieldNumber className='icon' />
                         <input type='text' placeholder='Train Number' />
                     </div>
-                    <div className='input-box'>
-                        <BsFillCalendar2DateFill className='icon' />
-                        <input type='date' placeholder='Date' />
-                    </div>
                     <div className='button'>
                         <button type='submit'>Search</button>
                     </div>

@@ -120,30 +120,6 @@ export default function AddTrain() {
             </div>
           </div>
           <br />
-          <br />
-          <div className='input-pair'>
-            <div className='input-box'>
-              <BsFillCalendar2DateFill className='icon' />
-              <input
-                type='date'
-                placeholder='Date'
-                name='Date'
-                value={trainDetails.date}
-                onChange={handleChange}
-              />
-            </div>
-            <div className='input-box'>
-              <IoIosTime className='icon' />
-              <input
-                type='time'
-                placeholder='time'
-                name='time'
-                value={trainDetails.time}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-          <br />
           <div className='button'>
             <button type='submit'>ADD</button>
           </div>
