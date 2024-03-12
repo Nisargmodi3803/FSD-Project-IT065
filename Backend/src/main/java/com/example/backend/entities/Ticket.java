@@ -24,8 +24,6 @@ public class Ticket {
     @JoinColumn(name = "train_number")
     private Train train;
 
-    // Constructors, getters, and setters
-
     public long getTicketId() {
         return ticketId;
     }
@@ -78,6 +76,16 @@ public class Ticket {
             }
         } else {
             throw new TrainNotFoundException("Train not found.");
+        }
+    }
+
+    public void updateSeatWhenDelete(Train train){
+        if(train != null){
+            int seats = train.getTrainSeat();
+            seats += totalTickets;
+            train.setTrainSeat(seats);
+        } else {
+            throw new TrainNotFoundException("Train not found");
         }
     }
 }

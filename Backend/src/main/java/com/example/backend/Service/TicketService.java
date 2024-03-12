@@ -46,9 +46,19 @@ public class TicketService
 
 
     @Transactional
-    public void deleteTicket(long ticketId)
-    {
-        ticketRepository.deleteById(ticketId);
+    public void deleteTicket(long ticketId) {
+        Optional<Ticket> optionalTicket = ticketRepository.findById(ticketId);
+        if (optionalTicket.isPresent()) {
+            Ticket ticket = optionalTicket.get();
+            Train train = ticket.getTrain();
+            if (train != null) {
+                ticket.updateSeatWhenDelete(train);
+                trainRepository.save(train);
+            }
+            ticketRepository.deleteById(ticketId);
+        } else {
+            throw new IllegalArgumentException("Ticket with ID " + ticketId + " not found.");
+        }
     }
 
     public List<Ticket> getTrainChart(long trainNumber)

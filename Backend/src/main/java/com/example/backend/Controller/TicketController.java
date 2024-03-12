@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/ticket")
+@CrossOrigin("*")
 public class TicketController
 {
     @Autowired
