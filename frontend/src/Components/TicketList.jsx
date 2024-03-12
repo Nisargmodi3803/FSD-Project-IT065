@@ -1,15 +1,40 @@
-import React from 'react'
-import { FaLocationDot } from "react-icons/fa6";
-import { BsFillCalendar2DateFill } from "react-icons/bs";
-import { IoIosTime } from "react-icons/io";
-import './TicketList.css'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import './TicketList.css';
 
 export default function TicketList() {
+  const [tickets, setTickets] = useState([]);
+
+  useEffect(() => {
+    fetchAllTickets();
+  }, []);
+
+  const fetchAllTickets = async () => {
+    try {
+      const response = await axios.get('http://localhost:8080/ticket/tickets');
+      setTickets(response.data);
+    } catch (error) {
+      console.error('Error fetching tickets:', error);
+    }
+  };
+
+  const handleDelete = async (ticketId) => {
+    try {
+      const response = await axios.delete(`http://localhost:8080/ticket/tickets/${ticketId}`);
+      console.log(response.data); // Log the response from the backend
+      alert('Ticket deleted successfully!');
+      fetchAllTickets();
+    } catch (error) {
+      console.error('Error deleting ticket:', error);
+      alert('Error deleting ticket. Please try again.');
+    }
+  };
+
   return (
     <div className='ticket'>
       <div className='wrap'>
-          <h1>TICKET LIST</h1>
-          <br />
+        <h1>TICKET LIST</h1>
+        <br />
       </div>
       <div className='table-container'>
         <div className='table'>
@@ -26,23 +51,25 @@ export default function TicketList() {
                 <th>Total Fare</th>
                 <th>Delete Ticket</th>
               </tr>
-              <tr>
-                <td>Gujarat Queen</td>
-                <td>19033</td>
-                <td>Valsad</td>
-                <td>Ahmedabad</td>
-                <td>300</td>
-                <td>Nisarg Modi</td>
-                <td>5</td>
-                <td>1500</td>
-                <td><button className='delete-button'>Delete</button></td>
-              </tr>
             </thead>
             <tbody>
+              {tickets.map(ticket => (
+                <tr key={ticket.ticketId}>
+                  <td>{ticket.train.trainName}</td>
+                  <td>{ticket.train.trainNumber}</td>
+                  <td>{ticket.train.trainFrom}</td>
+                  <td>{ticket.train.trainTo}</td>
+                  <td>{ticket.train.price}</td>
+                  <td>{ticket.passengerName}</td>
+                  <td>{ticket.totalTickets}</td>
+                  <td>{ticket.totalFare}</td>
+                  <td><button className='delete-button' onClick={() => handleDelete(ticket.ticketId)}>Delete</button></td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
       </div>
     </div>
-  )
+  );
 }

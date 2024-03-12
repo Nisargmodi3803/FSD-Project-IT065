@@ -4,23 +4,18 @@ import { AiOutlineFieldNumber } from "react-icons/ai";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaRupeeSign } from "react-icons/fa";
 import { MdOutlineAirlineSeatReclineExtra } from "react-icons/md";
-import { BsFillCalendar2DateFill } from "react-icons/bs";
-import { IoIosTime } from "react-icons/io";
 import "./AddTrain.css";
+import axios from 'axios';
 
 export default function AddTrain() {
   const [trainDetails, setTrainDetails] = useState({
     trainName: '',
     trainNumber: '',
-    fromLocation: '',
-    toLocation: '',
-    ticketPrice: '',
-    numberOfSeats: '',
-    date: '',
-    time: ''
+    trainFrom: '', // Change to match your entity class field
+    trainTo: '', // Change to match your entity class field
+    price: '', // Change to match your entity class field
+    trainSeat: '' // Change to match your entity class field
   });
-
-  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,18 +25,28 @@ export default function AddTrain() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(trainDetails);
+    try {
+      console.log(trainDetails);
+      const response = await axios.post('http://localhost:8080/train/trains', trainDetails);
+      console.log(response.data); // Log the response from the backend
+      alert('Train added successfully!');
+      clearForm();
+    } catch (error) {
+      console.error('Error adding train:', error);
+      alert('Error adding train. Please try again.');
+    }
+  };
+
+  const clearForm = () => {
     setTrainDetails({
       trainName: '',
       trainNumber: '',
-      fromLocation: '',
-      toLocation: '',
-      ticketPrice: '',
-      numberOfSeats: '',
-      date: '',
-      time: ''
+      trainFrom: '',
+      trainTo: '',
+      price: '',
+      trainSeat: ''
     });
   };
 
@@ -81,8 +86,8 @@ export default function AddTrain() {
               <input
                 type='text'
                 placeholder='From Location'
-                name='fromLocation'
-                value={trainDetails.fromLocation}
+                name='trainFrom'
+                value={trainDetails.trainFrom}
                 onChange={handleChange}
               />
             </div>
@@ -91,8 +96,8 @@ export default function AddTrain() {
               <input
                 type='text'
                 placeholder='To Location'
-                name='toLocation'
-                value={trainDetails.toLocation}
+                name='trainTo'
+                value={trainDetails.trainTo}
                 onChange={handleChange}
               />
             </div>
@@ -105,8 +110,8 @@ export default function AddTrain() {
               <input
                 type='number'
                 placeholder='Ticket Price'
-                name='ticketPrice'
-                value={trainDetails.ticketPrice}
+                name='price'
+                value={trainDetails.price}
                 onChange={handleChange}
               />
             </div>
@@ -115,8 +120,8 @@ export default function AddTrain() {
               <input
                 type='number'
                 placeholder='Number of Seats'
-                name='numberOfSeats'
-                value={trainDetails.numberOfSeats}
+                name='trainSeat'
+                value={trainDetails.trainSeat}
                 onChange={handleChange}
               />
             </div>

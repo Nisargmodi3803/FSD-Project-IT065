@@ -91,3 +91,7 @@
     font-weight: bold;
     margin-bottom: 5px;
 }
+
+.no-chart-message h1{
+    color: rgb(167, 6, 6);
+}

@@ -1,58 +1,40 @@
+.home-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 40px;
+  background: url('../assets/train.webp') center/cover;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
 .home {
-  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 20px;
+  border-radius: 10px;
 }
 
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-header h1 {
-  margin: 0;
-  padding: 10px;
+#features {
+  margin-top: 50px;
 }
 
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+#features h1 {
+  text-align: center;
 }
 
-nav ul li {
-  display: inline;
-  margin-right: 10px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-section {
+#features ul {
+  list-style-type: disc;
+  margin-left: 20px;
   margin-top: 20px;
 }
 
-#slider {
-  margin-bottom: 20px;
-}
-
-#slider img {
-  width: 100%;
-}
-
-h2 {
-  color: #333;
-}
-
-p {
-  color: #666;
-}
-
-.slick-slide img {
-  max-width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  
+#features li {
+  margin-bottom: 10px;
 }
