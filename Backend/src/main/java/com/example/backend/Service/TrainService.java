@@ -78,4 +78,9 @@ public class TrainService
     {
         return trainRepository.getTrainByLocation(toLocation,fromLocation);
     }
+
+    public int getAvailableSeats(long trainNumber)
+    {
+        return trainRepository.getAvailableSeats(trainNumber);
+    }
 }

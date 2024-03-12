@@ -32,4 +32,10 @@ public class TicketController
         ticketService.deleteTicket(ticketId);
         return "Ticket with ticket-id : "+ticketId+ " deleted";
     }
+
+    @GetMapping("tickets/chart")
+    public List<Ticket> getTrainChart(@RequestParam long trainNumber)
+    {
+        return ticketService.getTrainChart(trainNumber);
+    }
 }

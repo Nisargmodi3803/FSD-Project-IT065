@@ -1,5 +1,6 @@
 package com.example.backend.entities;
 
+import com.example.backend.Exception.TrainNotFoundException;
 import jakarta.persistence.*;
 
 @Entity
@@ -65,12 +66,18 @@ public class Ticket {
         this.train = train;
     }
 
-    public void calculateTotalFareAndUpdateSeats(Train train) {
+    public void calculateTotalFareAndUpdateSeats(Train train) throws TrainNotFoundException {
         if (train != null) {
-            totalFare = totalTickets * train.getPrice();
-            int seats = train.getTrainSeat();
-            seats -= totalTickets;
-            train.setTrainSeat(seats);
+            if (totalTickets <= train.getTrainSeat()) {
+                totalFare = totalTickets * train.getPrice();
+                int seats = train.getTrainSeat();
+                seats -= totalTickets;
+                train.setTrainSeat(seats);
+            } else {
+                throw new TrainNotFoundException("Not enough seats available on the train.");
+            }
+        } else {
+            throw new TrainNotFoundException("Train not found.");
         }
     }
 }

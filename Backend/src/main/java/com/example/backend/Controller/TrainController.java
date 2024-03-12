@@ -50,4 +50,10 @@ public class TrainController
     {
         return trainService.getTrainByLocation(toLocation,fromLocation);
     }
+
+    @GetMapping("/trains/availableSeats/{trainNumber}")
+    public int getAvailableSeats(@PathVariable long trainNumber)
+    {
+        return trainService.getAvailableSeats(trainNumber);
+    }
 }
