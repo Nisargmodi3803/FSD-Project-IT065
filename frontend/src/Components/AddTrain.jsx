@@ -20,6 +20,8 @@ export default function AddTrain() {
     time: ''
   });
 
+  
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setTrainDetails(prevState => ({
