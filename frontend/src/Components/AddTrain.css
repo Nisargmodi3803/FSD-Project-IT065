@@ -38,6 +38,7 @@ h1 {
   width: 100%; 
   border: 1px solid #ccc;
   border-radius: 5px;
+  padding:10px ;
 }
 
 .input-box input::placeholder {
