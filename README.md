@@ -47,10 +47,7 @@ This is a mini-project for an Online Railway Ticket Booking system developed usi
 - Note that this project does not contain a login and signup page. Admin and user functionalities are shown in one project only, accessible via the navigation bar.
 
 ## Contributors
-- [Your Name]
-- [Additional Contributors]
+- Nisarg Modi
 
 ## License
-[Your License Information]
-
 Feel free to customize this README file according to your project's specific requirements and structure. Happy coding!
