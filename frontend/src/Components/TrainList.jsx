@@ -79,34 +79,38 @@ export default function TrainList() {
       </div>
       <div className='table-container'>
         <div className='table'>
-          <table>
-            <thead>
-              <tr>
-                <th>Train Name</th>
-                <th>Train Number</th>
-                <th>From</th>
-                <th>To</th>
-                <th>Price</th>
-                <th>Available Seats</th>
-                <th>Delete Train</th>
-                <th>Update Train</th>
-              </tr>
-            </thead>
-            <tbody>
-              {trains.map(train => (
-                <tr key={train.trainNumber}>
-                  <td>{train.trainName}</td>
-                  <td>{train.trainNumber}</td>
-                  <td>{train.trainFrom}</td>
-                  <td>{train.trainTo}</td>
-                  <td>{train.price}</td>
-                  <td>{train.trainSeat}</td>
-                  <td><button className='delete-button' onClick={() => handleDelete(train.trainNumber)}>Delete</button></td>
-                  <td><button className='update-button' onClick={() => handleUpdate(train)}>Update</button></td>
+          {trains.length === 0 ? (
+            <p className='no-trains'><h1>Trains not found</h1></p>
+          ) : (
+            <table>
+              <thead>
+                <tr>
+                  <th>Train Name</th>
+                  <th>Train Number</th>
+                  <th>From</th>
+                  <th>To</th>
+                  <th>Price</th>
+                  <th>Available Seats</th>
+                  <th>Delete Train</th>
+                  <th>Update Train</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {trains.map(train => (
+                  <tr key={train.trainNumber}>
+                    <td>{train.trainName}</td>
+                    <td>{train.trainNumber}</td>
+                    <td>{train.trainFrom}</td>
+                    <td>{train.trainTo}</td>
+                    <td>{train.price}</td>
+                    <td>{train.trainSeat}</td>
+                    <td><button className='delete-button' onClick={() => handleDelete(train.trainNumber)}>Delete</button></td>
+                    <td><button className='update-button' onClick={() => handleUpdate(train)}>Update</button></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
         </div>
       </div>
 

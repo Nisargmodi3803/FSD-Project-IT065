@@ -9,6 +9,7 @@ export default function BookTicket() {
   const [trains, setTrains] = useState([]);
   const [fromLocation, setFromLocation] = useState('');
   const [toLocation, setToLocation] = useState('');
+  const [trainNotFound, setTrainNotFound] = useState(false);
 
   useEffect(() => {
     fetchAllTrains();
@@ -18,6 +19,7 @@ export default function BookTicket() {
     try {
       const response = await axios.get('http://localhost:8080/train/trains');
       setTrains(response.data);
+      setTrainNotFound(response.data.length === 0);
       console.log(response.data);
     } catch (error) {
       console.error('Error fetching trains:', error);
@@ -29,6 +31,7 @@ export default function BookTicket() {
     try {
       const response = await axios.get(`http://localhost:8080/train/trains/location?fromLocation=${fromLocation}&toLocation=${toLocation}`);
       setTrains(response.data);
+      setTrainNotFound(response.data.length === 0);
       console.log(response.data);
     } catch (error) {
       console.error('Error fetching trains by location:', error);
@@ -71,34 +74,38 @@ export default function BookTicket() {
         </form>
       </div>
       <div className='table-container'>
-        <div className='table'>
-          <table>
-            <thead>
-              <tr>
-                <th>Train Name</th>
-                <th>Train Number</th>
-                <th>From</th>
-                <th>To</th>
-                <th>Price</th>
-                <th>Available Seats</th>
-                <th>Book</th>
-              </tr>
-            </thead>
-            <tbody>
-              {trains.map(train => (
-                <tr key={train.trainNumber}>
-                  <td>{train.trainName}</td>
-                  <td>{train.trainNumber}</td>
-                  <td>{train.trainFrom}</td>
-                  <td>{train.trainTo}</td>
-                  <td>{train.price}</td>
-                  <td>{train.trainSeat}</td>
-                  <td><button className='book-button' onClick={() => handleBook(train)}>Book</button></td>
+        {trainNotFound ? (
+          <div className='not-found-message'><h1>Train not found.</h1></div>
+        ) : (
+          <div className='table'>
+            <table>
+              <thead>
+                <tr>
+                  <th>Train Name</th>
+                  <th>Train Number</th>
+                  <th>From</th>
+                  <th>To</th>
+                  <th>Price</th>
+                  <th>Available Seats</th>
+                  <th>Book</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+              </thead>
+              <tbody>
+                {trains.map(train => (
+                  <tr key={train.trainNumber}>
+                    <td>{train.trainName}</td>
+                    <td>{train.trainNumber}</td>
+                    <td>{train.trainFrom}</td>
+                    <td>{train.trainTo}</td>
+                    <td>{train.price}</td>
+                    <td>{train.trainSeat}</td>
+                    <td><button className='book-button' onClick={() => handleBook(train)}>Book</button></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
       </div>
     </div>
   );
