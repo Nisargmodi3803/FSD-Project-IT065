@@ -48,6 +48,3 @@ This is a mini-project for an Online Railway Ticket Booking system developed usi
 
 ## Contributors
 - Nisarg Modi
-
-## License
-Feel free to customize this README file according to your project's specific requirements and structure. Happy coding!
